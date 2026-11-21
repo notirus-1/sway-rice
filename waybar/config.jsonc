@@ -1,0 +1,106 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 6,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/window"
+    ],
+
+    "modules-center": [
+        "mpris"
+    ],
+
+    "modules-right": [
+	"temperature",
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "tray",
+        "clock"
+    ],
+
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": false,
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "on-click": "activate"
+    },
+
+    "sway/window": {
+        "format": "󰣆 {}",
+        "max-length": 45,
+        "separate-outputs": true
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "󰍛 {usage}%",
+        "tooltip": true
+    },
+
+    "temperature": {
+	    "hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input"],
+	    "criticial-threshold": 75,
+	    "format": " {temperatureC}°C"
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": " {percentage}%",
+        "tooltip": true
+    },
+
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰖁 muted",
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "tooltip": true
+    },
+
+    "backlight": {
+        "format": "󰃟 {percent}%",
+        "tooltip": true
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": true
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "mpris": {
+        "format": "󰎈 {artist} - {title}",
+        "format-paused": "󰏤 {artist} - {title}",
+        "format-stopped": "",
+        "max-length": 40,
+        "interval": 2,
+        "tooltip": true
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "󰥔  {:%H:%M    %d/%m}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    }
+}
