@@ -1,0 +1,158 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: #263A32;
+    color: #E4D5B5;
+}
+
+/* Remove unnecessary spacing */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 0;
+    padding: 0;
+}
+
+/* Workspaces */
+#workspaces {
+    margin: 0;
+    padding: 0;
+    background: #34483C;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 0;
+
+    background: transparent;
+    color: #AAB8A0;
+
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button.focused {
+    background: #C49A53;
+    color: #263A32;
+}
+
+#workspaces button.urgent {
+    background: #A65D45;
+    color: #E4D5B5;
+}
+
+#workspaces button:hover {
+    background: #526A54;
+    color: #E4D5B5;
+}
+
+/* Focused window */
+#window {
+    padding: 0 12px;
+    color: #D6C7A5;
+}
+/*TEMPERATURE*/
+#temperature {
+    padding: 0 10px;
+    background: #526A54;
+    color: #E2BD76;
+}
+#temperature.critical {
+    padding: 0 10px;
+    background: #526A54;
+    color: #E2BD76;
+}
+
+/* CPU */
+#cpu {
+    padding: 0 10px;
+    background: #405849;
+    color: #A9B88B;
+}
+
+/* Memory */
+#memory {
+    padding: 0 10px;
+    background: #526A54;
+    color: #E2BD76;
+}
+
+/* Volume */
+#pulseaudio {
+    padding: 0 10px;
+    background: #405849;
+    color: #E4D5B5;
+}
+
+#pulseaudio.muted {
+    color: #AAB8A0;
+}
+
+/* Screen backlight */
+#backlight {
+    padding: 0 10px;
+    background: #526A54;
+    color: #E2BD76;
+}
+
+/* Battery */
+#battery {
+    padding: 0 10px;
+    background: #405849;
+    color: #A9B88B;
+}
+
+#battery.warning {
+    color: #E2BD76;
+}
+
+#battery.critical {
+    color: #A65D45;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #E4D5B5;
+}
+
+/* Tray */
+#tray {
+    padding: 0 8px;
+    background: #34483C;
+}
+
+/* Media */
+#mpris {
+    padding: 0 12px;
+    background: #405849;
+    color: #E4D5B5;
+}
+
+/* Clock */
+#clock {
+    padding: 0 12px;
+    background: #C49A53;
+    color: #263A32;
+}
+
+/* Tooltips */
+tooltip {
+    background: #263A32;
+    color: #E4D5B5;
+    border: 1px solid #87947B;
+    border-radius: 0;
+}
+
+tooltip label {
+    color: #E4D5B5;
+}
